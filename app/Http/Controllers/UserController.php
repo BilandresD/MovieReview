@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
 
 class UserController extends Controller
 {
@@ -25,8 +26,15 @@ class UserController extends Controller
     public function getAllMovies()
     {
         $movies = DB::select("SELECT * FROM movies");
+    
+        foreach ($movies as $movie) {
+            // Assuming 'image_path' is the column name storing the image path
+            $movie->image_path = asset('storage/' . $movie->image_path);
+        }
+    
         return response()->json($movies);
     }
+    
 
     public function insertMovie($table, $columns, $values)
     {
@@ -133,7 +141,5 @@ class UserController extends Controller
         // Redirect to index.php
         header("Location: dashboard.php");
         exit;
-
-
     }
 }
