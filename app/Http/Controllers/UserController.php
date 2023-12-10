@@ -2,12 +2,19 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
+    public $mysql;
+
+
+
+
     public function insert(Request $request, $table, $data)
     {
         $table_columns = implode(',', array_keys($data));
@@ -26,15 +33,15 @@ class UserController extends Controller
     public function getAllMovies()
     {
         $movies = DB::select("SELECT * FROM movies");
-    
+
         foreach ($movies as $movie) {
             // Assuming 'image_path' is the column name storing the image path
             $movie->image_path = asset('storage/' . $movie->image_path);
         }
-    
+
         return response()->json($movies);
     }
-    
+
 
     public function insertMovie($table, $columns, $values)
     {
@@ -62,6 +69,9 @@ class UserController extends Controller
         return response()->json(['error' => 'Error deleting movie'], 500);
     }
 
+
+
+
     public function getAllUsers()
     {
         $users = DB::table('users')->get();
@@ -72,7 +82,12 @@ class UserController extends Controller
 
         return response()->json($users, 200);
     }
-
+    public function getUserByEmail($email)
+    {
+        $sql = "SELECT * FROM users WHERE email = '" . $email . "'";
+        $result = $this->mysql->query($sql);
+        return $result->fetch_assoc();
+    }
 
     public function insertMovieRating($movie_title, $rating, $review)
     {
@@ -124,7 +139,6 @@ class UserController extends Controller
     {
         return isset($_SESSION['user_id']);
     }
-
 
 
     function logout()
