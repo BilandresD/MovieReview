@@ -23,9 +23,15 @@ Route::post('/admin', [RatingController::class, 'submitRating']);
 Route::get('/admin', [RatingController::class, 'getRatingInfo'])->name('ratings.get');
 
 
+Route::post('/users', [UserController::class, 'getAllUsers'])->name('users.get');
+Route::get('/getAllMovies', [UserController::class, 'getAllMovies'])->name('movies.get');
 
 
-Route::post('/admin', [UserController::class, 'getAllUsers'])->name('users.get');
 
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');
 
-
+Route::get('/admin', function () {
+    return view('admin');
+})->name('admin');

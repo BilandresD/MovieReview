@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
 
 class UserController extends Controller
 {
@@ -21,17 +22,19 @@ class UserController extends Controller
         return response()->json(['message' => 'Record inserted successfully']);
     }
 
-    public function getUserByEmail($email)
-    {
-        $result = DB::select("SELECT * FROM users WHERE email = ?", [$email]);
-        return response()->json($result->first());
-    }
 
     public function getAllMovies()
     {
         $movies = DB::select("SELECT * FROM movies");
+    
+        foreach ($movies as $movie) {
+            // Assuming 'image_path' is the column name storing the image path
+            $movie->image_path = asset('storage/' . $movie->image_path);
+        }
+    
         return response()->json($movies);
     }
+    
 
     public function insertMovie($table, $columns, $values)
     {
@@ -122,18 +125,7 @@ class UserController extends Controller
         return isset($_SESSION['user_id']);
     }
 
-    function login($email, $password)
-    {
-        $db = new db();
-        $user = $db->getUserByEmail($email);
 
-        if ($user && password_verify($password, $user['password'])) {
-            $_SESSION['user_id'] = $user['id'];
-            return true; // Successful login
-        }
-
-        return false; // Login failed
-    }
 
     function logout()
     {
@@ -149,7 +141,5 @@ class UserController extends Controller
         // Redirect to index.php
         header("Location: dashboard.php");
         exit;
-
-
     }
 }
