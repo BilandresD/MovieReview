@@ -21,11 +21,6 @@ class UserController extends Controller
         return response()->json(['message' => 'Record inserted successfully']);
     }
 
-    public function getUserByEmail($email)
-    {
-        $result = DB::select("SELECT * FROM users WHERE email = ?", [$email]);
-        return response()->json($result->first());
-    }
 
     public function getAllMovies()
     {
@@ -59,7 +54,7 @@ class UserController extends Controller
         return response()->json(['error' => 'Error deleting movie'], 500);
     }
 
-/*     public function getAllUsers()
+    public function getAllUsers()
     {
         $users = DB::table('users')->get();
 
@@ -68,7 +63,7 @@ class UserController extends Controller
         }
 
         return response()->json($users, 200);
-    } */
+    }
 
 
     public function insertMovieRating($movie_title, $rating, $review)
@@ -122,18 +117,7 @@ class UserController extends Controller
         return isset($_SESSION['user_id']);
     }
 
-    function login($email, $password)
-    {
-        $db = new db();
-        $user = $db->getUserByEmail($email);
 
-        if ($user && password_verify($password, $user['password'])) {
-            $_SESSION['user_id'] = $user['id'];
-            return true; // Successful login
-        }
-
-        return false; // Login failed
-    }
 
     function logout()
     {
