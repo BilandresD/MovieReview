@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap');
+
+html{
+    height: 100%;
+    width: 100%;
+}
+body {
+    font-family: Poppins, sans-serif;
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+    background: rgb(8, 22, 83);
+    background: linear-gradient(90deg, rgba(8, 22, 83, 1) 0%, rgba(78, 90, 167, 1) 50%, rgba(0, 237, 255, 1) 100%);
+}
+
+.title {
+    text-align: center;
+}
+
+.movies {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+    gap: 1rem;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.movies-card {
+    padding-top: auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    align-items: center;
+    bottom: 0;
+}
+.movies img {
+    display: flex;
+    object-fit: cover;
+    width: 95%;
+    height: 15rem;
+    border-radius: 8px 8px 0 0;
+    margin: auto;
+    margin-top: 0.25rem;
+}
+
+/* ---------------------------- */
+
+
+.movie-info {
+    padding: 15px;
+}
+
+.movie-info p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+.movie-info p.title {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.movie-info p.overview {
+    color: #777;
+}
+
+.movie-info p.genres {
+    color: #555;
+}
+
+.movie-info p.release-date {
+    color: #888;
+}
+
+
+/* -------------- button ----------------------- */
+.bn3 {
+    display: inline-block;
+    /* background-color: #777; */
+    background-color: rgb(60, 84, 224);
+    padding: 0.5em 1.7em;
+    margin: 0 0.1em 0.1em 0;
+    /* border: 0.16em solid rgb(255, 255, 255); */
+    border: none;
+    border-radius: 2em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    color: darkblue;
+    text-shadow: 0 0.04em 0.04em rgba(255, 255, 255, 0.253);
+    text-align: center;
+}
+
+.bn3 {
+    border-color: #ffffff;
+    padding: 0.6em 2.3em;
+    cursor: pointer;
+    font-size: 1em;
+    color: #ffffff;
+    background-image: linear-gradient(45deg, transparent 50%, #000000 50%);
+    background-position: 25%;
+    background-size: 400%;
+}
+
+.bn3:hover {
+    background-color: gold;
+    color: #fff;
+}
+
+
+/* ------------------- Navbar ---------------- */
+.navbar {
+    display: flex;
+    text-align: right;
+    justify-content: center;
+    background-color: rgba(255,255,255,0.5);
+}
+
+.logo {
+    width: 15rem;
+    object-fit: cover;
+}
+
+/* -----------search------------------- */
+
+.box {
+    position: relative;
+    width: 25rem;
+    margin: 1rem;
+}
+
+.input {
+    width: 2rem;
+    height: 2rem;
+    background: none;
+    border: 0.20rem solid darkblue;
+    border-radius: 50px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    color: transparent;
+    outline: none;
+    transition: .5s;
+}
+
+.box:hover input {
+    width: 22rem;
+    height: 2rem;
+    background: whitesmoke;
+    border: 0.20rem solid darkblue;
+    color: darkblue;
+}
+
+.box i {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translate(-50%, -50%);
+    font-size: 1rem;
+    color: darkblue;
+    transition: .2s;
+}
+
+.box:hover i {
+    opacity: 0;
+    z-index: -1;
+} 

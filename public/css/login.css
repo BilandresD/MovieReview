@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap');
+
+
+body {
+    font-family: Poppins, sans-serif;
+    /* background-image: url("../resources/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex; */
+    background: rgb(8, 22, 83);
+    background: linear-gradient(90deg, rgba(8, 22, 83, 1) 0%, rgba(78, 90, 167, 1) 50%, rgba(0, 237, 255, 1) 100%);
+}
+
+.s-cont {
+    display: flex;
+    width: 50%;
+    margin: auto;
+    flex-direction: column;
+    background-color: rgba(248, 240, 240, 0.5);
+    border-radius: 1rem;
+    margin-top: 22vh;
+}
+
+.title {
+    text-align: center;
+}
+
+.container {
+    /* background-color: rgb(64, 64, 204); */
+    width: 100%;
+    border-radius: 1rem;
+    margin: auto 0;
+    padding-top: 0;
+
+}
+
+.link {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+a {
+    text-decoration: none;
+    margin: auto;
+}
+
+
+
+.login {
+    color: #f0f8ff;
+    margin: 8rem;
+}
+
+a:hover {
+    color: yellow;
+}
+
+.signup {
+    color: rgb(45, 18, 154);
+    margin: 8rem;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* vh stands for viewport height */
+}
+
+form {
+    width: 50%;
+    /* adjust this value to control the form's width */
+    margin-bottom: 5%;
+}
+
+label {
+    margin-left: .50rem;
+    color: aliceblue;
+    color: rgb(45, 18, 154);
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.btn {
+    font-family: Poppins, sans-serif;
+    border: none;
+    background-color: rgb(45, 18, 154);
+    color: white;
+    border-radius: .25rem;
+    padding: 0.50rem;
+    margin: 0.50rem auto;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: gold;
+    color: black;
+}
+
+#email,
+#password {
+    width: 100%;
+    border: none;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    font-family: Poppins, sans-serif;
+}
+
+#email:focus,
+#password:focus {
+    outline: none;
+}
+
+h2 {
+    text-align: center;
+    font-size: medium;
+    margin: 0;
+}
+
+.sign-with {
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: center;
+
+}
+
+#login-form {
+    margin-bottom: 0;
+}
+
+#google,
+#facebook {
+    color: black;
+    cursor: pointer;
+}
+
+
+
+.logo {
+    align-self: center;
+    width: 15rem;
+    object-fit: cover;
+    padding-bottom: 0;
+}

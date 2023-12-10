@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap');
+
+body{
+    background: rgb(8, 22, 83);
+    background: linear-gradient(90deg, rgba(8, 22, 83, 1) 0%, rgba(78, 90, 167, 1) 50%, rgba(0, 237, 255, 1) 100%);
+  }
+
+/* -------------- Navbar -------------------- */
+.navbar {
+    display: flex;
+    text-align: right;
+    justify-content: center;
+}
+
+.navbar div {
+    /* Optional: If you want to add space between the navigation items */
+    margin-left: 1rem;
+}
+
+.link-cont {
+    display: flex;
+    margin: auto;
+}
+
+.navbar img.logo {
+    /* Optional: If you want to adjust the position of the logo within the navbar */
+    margin-left: auto;
+    width: 15rem;
+    object-fit: cover;
+}
+
+a {
+    font-family: Poppins, sans-serif;
+    text-decoration: none;
+    color: darkblue;
+    font-size: 1rem;
+    justify-content: sp;
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+}
+
+a:hover {
+    color: yellow;
+    background-color: darkblue;
+}
+
+/* -----------Search--------------- */
+
+#searchInput {
+    width: 53%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+#searchInput:focus {
+    outline: none;
+}
+
+input[type=text] {
+    width: 50%;
+    padding: 0.5rem;
+    margin: auto;
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+}
+
+/* --------------Table------------------- */
+.rating-table {
+    font-family: Poppins, sans-serif;
+    border: none;
+    border-collapse: collapse;
+    width: 60%;
+    margin: auto;
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+  
+  .rating-table td, .users-table th {
+    padding: 8px;
+  }
+  
+  .rating-table tr:nth-child(even){
+    /* background-color: #f2f2f2, 0.5; */
+    background-color: rgba(0, 0, 0, 0.25);
+  }
+  
+  .rating-table tr:hover {background-color: #ddd;}
+  
+  .rating-table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: darkblue;
+    color: white;
+  }
+
+  /* ------------ button ------------ */
+  button {
+    cursor: pointer;
+    background-color: gold;
+    color: darkblue;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    font-family: Poppins, sans-serif;
+  }
+
+  button:hover {
+    background-color: darkblue;
+    color: gold;
+  }

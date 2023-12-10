@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap');
+
+body {
+    background: rgb(8, 22, 83);
+    background: linear-gradient(90deg, rgba(8, 22, 83, 1) 0%, rgba(78, 90, 167, 1) 50%, rgba(0, 237, 255, 1) 100%);
+}
+
+/* -------------- Navbar -------------------- */
+.navbar {
+    display: flex;
+    text-align: right;
+    justify-content: center;
+}
+
+.navbar div {
+    /* Optional: If you want to add space between the navigation items */
+    margin-left: 1rem;
+}
+
+.link-cont {
+    display: flex;
+    margin: auto;
+}
+
+.navbar img.logo {
+    /* Optional: If you want to adjust the position of the logo within the navbar */
+    margin-left: auto;
+    width: 15rem;
+    object-fit: cover;
+}
+
+a {
+    font-family: Poppins, sans-serif;
+    text-decoration: none;
+    color: darkblue;
+    font-size: 1rem;
+    justify-content: sp;
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+}
+
+a:hover {
+    color: yellow;
+    background-color: darkblue;
+}
+
+
+/* ---------- Form --------------- */
+
+.form-container {
+    margin: auto;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    font-family: Poppins, sans-serif;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type=text] {
+    width: 100%;
+    height: 2rem;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+}
+
+input[type=text]:focus,
+textarea:focus {
+    font-family: Poppins, sans-serif;
+    outline: none;
+}
+
+textarea {
+    width: 100%;
+    height: 5rem;
+    border: 1px solid #ccc;
+    resize: none;
+    border-radius: 0.25rem;
+}
+
+.cont2 {
+    display: flex;
+    justify-content: space-around;
+}
+
+input[type="date"] {
+    font-family: Poppins, sans-serif;
+    border: none;
+    padding: 0.25rem;
+    border-radius: 0.25rem;
+    cursor: text;
+}
+
+::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+}
+
+input[type="file"] {
+    font-family: Poppins, sans-serif;
+    color: black;
+}
+
+::file-selector-button {
+    font-family: Poppins, sans-serif;
+    cursor: pointer;
+    background: gold;
+    color: darkblue;
+    border: none;
+    border-radius: 0.25rem;
+    padding: 0.25rem;
+}
+
+::file-selector-button:hover {
+    background: darkblue;
+    color: gold;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: gold;
+    color: black;
+    padding: 0.5rem;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: Poppins, sans-serif;
+}
+
+input[type=submit]:hover {
+    background-color: darkblue;
+    color: gold;
+}
+
+.form-container {
+    margin: auto;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    width:50%;
+    border-radius: 5px;
+    /* background-color: #f2f2f2; */
+    background-color: rgba(0, 0, 0, 0.25);
+    padding: 20px;
+  }
+
+
+
+
+/* ------------------- table --------------------- */
+
+.movie-table {
+    font-family: Poppins, sans-serif;
+    border: none;
+    border-collapse: collapse;
+    width: 60%;
+    margin: auto;
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+  
+  .movie-table td, .users-table th {
+    padding: 8px;
+  }
+  
+  .movie-table tr:nth-child(even){
+    /* background-color: #f2f2f2, 0.5; */
+    background-color: rgba(0, 0, 0, 0.25);
+  }
+  
+  .movie-table tr:hover {background-color: #ddd;}
+  
+  .movie-table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: darkblue;
+    color: white;
+  }
+
+  button{
+    color: darkblue;
+    background-color: gold;
+    border:none;
+    font-family: Poppins, sans-serif;
+    color:darkblue;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+  }
+
+  button:hover{
+    color: gold;
+    background-color: darkblue;
+  }
