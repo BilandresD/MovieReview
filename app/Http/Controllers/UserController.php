@@ -59,7 +59,7 @@ class UserController extends Controller
         return response()->json(['error' => 'Error deleting movie'], 500);
     }
 
-    public function getAllUsers()
+/*     public function getAllUsers()
     {
         $users = DB::table('users')->get();
 
@@ -68,7 +68,7 @@ class UserController extends Controller
         }
 
         return response()->json($users, 200);
-    }
+    } */
 
 
     public function insertMovieRating($movie_title, $rating, $review)
