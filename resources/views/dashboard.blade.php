@@ -4,11 +4,6 @@ session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<style>
-    .reviewText {
-        text-transform: capitalize;
-    }
-</style>
 
 <head>
 
@@ -24,13 +19,13 @@ session_start();
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="./css/dashboard.css">
+    <link rel="stylesheet" type="text/css" href="{{asset('./css/dashboard.css')}}">
 
 </head>
 
 <body>
     <nav class="navbar">
-        <img class="logo" src="Popcorn_logo.png">
+        <img class="logo" src="{{asset('images/Popcorn_logo.png')}}">
         <div class="box">
             <form name="search">
                 <input class="searchbar input" type="text" id="searchInput">
@@ -110,12 +105,12 @@ session_start();
                             <p>${overview}</p>
                             <p>Date Released: ${release_date}</p>
                             <select class="rating-input">
-    <option value="1">1 star</option>
-    <option value="2">2 stars</option>
-    <option value="3">3 stars</option>
-    <option value="4">4 stars</option>
-    <option value="5">5 stars</option>
-</select>
+                                <option value="1">1 star</option>
+                                <option value="2">2 stars</option>
+                                <option value="3">3 stars</option>
+                                <option value="4">4 stars</option>
+                                <option value="5">5 stars</option>
+                            </select>
                             <button type="button" class="btn btn-primary submit-rating">Submit Rating</button>
                         </div>
                         <div class="modal-footer">
