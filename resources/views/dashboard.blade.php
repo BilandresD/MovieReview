@@ -1,7 +1,4 @@
-<?php
-session_start();
 
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -34,7 +31,7 @@ session_start();
             <i class="fas fa-search">Search</i>
         </div>
         <!-- <a href="dashboard.php">LOG-OUT</a> -->
-        <a href="login.php"><button class="bn3">Login</button></a>
+        <a href="{{ route('login') }}"><button class="bn3">Login</button></a>
     </nav>
 
     <div class="movies" id="movies-container"></div>
